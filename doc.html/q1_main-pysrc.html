@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="ascii"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+          "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title>q1_main</title>
+  <link rel="stylesheet" href="epydoc.css" type="text/css" />
+  <script type="text/javascript" src="epydoc.js"></script>
+</head>
+
+<body bgcolor="white" text="black" link="blue" vlink="#204080"
+      alink="#204080">
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr valign="top">
+    <td width="100%">
+      <span class="breadcrumbs">
+        Module&nbsp;q1_main
+      </span>
+    </td>
+    <td>
+      <table cellpadding="0" cellspacing="0">
+        <!-- hide/show private -->
+        <tr><td align="right"><span class="options">[<a href="javascript:void(0);" class="privatelink"
+    onclick="toggle_private();">hide&nbsp;private</a>]</span></td></tr>
+        <tr><td align="right"><span class="options"
+            >[<a href="frames.html" target="_top">frames</a
+            >]&nbsp;|&nbsp;<a href="q1_main-pysrc.html"
+            target="_top">no&nbsp;frames</a>]</span></td></tr>
+      </table>
+    </td>
+  </tr>
+</table>
+<h1 class="epydoc">Source Code for <a href="q1_main-module.html">Module q1_main</a></h1>
+<pre class="py-src">
+<a name="L1"></a><tt class="py-lineno"> 1</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">csv</tt> </tt>
+<a name="L2"></a><tt class="py-lineno"> 2</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">girls</tt> <tt class="py-keyword">import</tt> <tt class="py-name">Girl</tt> </tt>
+<a name="L3"></a><tt class="py-lineno"> 3</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">boys</tt> <tt class="py-keyword">import</tt> <tt class="py-name">Boy</tt> </tt>
+<a name="L4"></a><tt class="py-lineno"> 4</tt>  <tt class="py-line"><tt class="py-keyword">from</tt> <tt class="py-name">generator</tt> <tt class="py-keyword">import</tt> <tt class="py-name">generate</tt> </tt>
+<a name="L5"></a><tt class="py-lineno"> 5</tt>  <tt class="py-line"><tt class="py-keyword">import</tt> <tt class="py-name">logging</tt> </tt>
+<a name="L6"></a><tt class="py-lineno"> 6</tt>  <tt class="py-line"> </tt>
+<a name="L7"></a><tt class="py-lineno"> 7</tt>  <tt class="py-line"><tt id="link-0" class="py-name" targets="Variable q1_main.g=q1_main-module.html#g"><a title="q1_main.g" class="py-name" href="#" onclick="return doclink('link-0', 'g', 'link-0');">g</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L8"></a><tt class="py-lineno"> 8</tt>  <tt class="py-line"><tt id="link-1" class="py-name" targets="Variable q1_main.b=q1_main-module.html#b"><a title="q1_main.b" class="py-name" href="#" onclick="return doclink('link-1', 'b', 'link-1');">b</a></tt> <tt class="py-op">=</tt> <tt class="py-op">[</tt><tt class="py-op">]</tt> </tt>
+<a name="L9"></a><tt class="py-lineno"> 9</tt>  <tt class="py-line"><tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">basicConfig</tt><tt class="py-op">(</tt><tt class="py-name">filename</tt><tt class="py-op">=</tt><tt class="py-string">'log.log'</tt><tt class="py-op">,</tt> <tt class="py-name">filemode</tt><tt class="py-op">=</tt><tt class="py-string">'w'</tt><tt class="py-op">,</tt> <tt class="py-name">format</tt><tt class="py-op">=</tt><tt class="py-string">'%(asctime)s %(levelname) s: %(message)s'</tt><tt class="py-op">,</tt> <tt class="py-name">datefmt</tt><tt class="py-op">=</tt><tt class="py-string">'%d/%m/%Y %I:%M:%S %p'</tt><tt class="py-op">,</tt> <tt class="py-name">level</tt><tt class="py-op">=</tt><tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">INFO</tt><tt class="py-op">)</tt> </tt>
+<a name="L10"></a><tt class="py-lineno">10</tt>  <tt class="py-line"><tt class="py-name">generate</tt><tt class="py-op">(</tt><tt class="py-op">)</tt> </tt>
+<a name="L11"></a><tt class="py-lineno">11</tt>  <tt class="py-line"><tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-string">'girls.csv'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt id="link-2" class="py-name" targets="Variable q1_main.csvfile=q1_main-module.html#csvfile"><a title="q1_main.csvfile" class="py-name" href="#" onclick="return doclink('link-2', 'csvfile', 'link-2');">csvfile</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L12"></a><tt class="py-lineno">12</tt>  <tt class="py-line">        <tt id="link-3" class="py-name" targets="Variable q1_main.reader=q1_main-module.html#reader"><a title="q1_main.reader" class="py-name" href="#" onclick="return doclink('link-3', 'reader', 'link-3');">reader</a></tt> <tt class="py-op">=</tt> <tt class="py-name">csv</tt><tt class="py-op">.</tt><tt class="py-name">DictReader</tt><tt class="py-op">(</tt><tt id="link-4" class="py-name"><a title="q1_main.csvfile" class="py-name" href="#" onclick="return doclink('link-4', 'csvfile', 'link-2');">csvfile</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L13"></a><tt class="py-lineno">13</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-5" class="py-name" targets="Variable q1_main.row=q1_main-module.html#row"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-5', 'row', 'link-5');">row</a></tt> <tt class="py-keyword">in</tt> <tt id="link-6" class="py-name"><a title="q1_main.reader" class="py-name" href="#" onclick="return doclink('link-6', 'reader', 'link-3');">reader</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L14"></a><tt class="py-lineno">14</tt>  <tt class="py-line">                <tt id="link-7" class="py-name"><a title="q1_main.g" class="py-name" href="#" onclick="return doclink('link-7', 'g', 'link-0');">g</a></tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">Girl</tt><tt class="py-op">(</tt><tt id="link-8" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-8', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Name'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-9" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-9', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Attractiveness'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-10" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-10', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Intelligence'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-11" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-11', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Budget'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L15"></a><tt class="py-lineno">15</tt>  <tt class="py-line"> </tt>
+<a name="L16"></a><tt class="py-lineno">16</tt>  <tt class="py-line"><tt class="py-keyword">with</tt> <tt class="py-name">open</tt><tt class="py-op">(</tt><tt class="py-string">'boys.csv'</tt><tt class="py-op">)</tt> <tt class="py-keyword">as</tt> <tt id="link-12" class="py-name" targets="Variable q1_main.csvfile1=q1_main-module.html#csvfile1"><a title="q1_main.csvfile1" class="py-name" href="#" onclick="return doclink('link-12', 'csvfile1', 'link-12');">csvfile1</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L17"></a><tt class="py-lineno">17</tt>  <tt class="py-line">        <tt id="link-13" class="py-name"><a title="q1_main.reader" class="py-name" href="#" onclick="return doclink('link-13', 'reader', 'link-3');">reader</a></tt> <tt class="py-op">=</tt> <tt class="py-name">csv</tt><tt class="py-op">.</tt><tt class="py-name">DictReader</tt><tt class="py-op">(</tt><tt id="link-14" class="py-name"><a title="q1_main.csvfile1" class="py-name" href="#" onclick="return doclink('link-14', 'csvfile1', 'link-12');">csvfile1</a></tt><tt class="py-op">)</tt> </tt>
+<a name="L18"></a><tt class="py-lineno">18</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-15" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-15', 'row', 'link-5');">row</a></tt> <tt class="py-keyword">in</tt> <tt id="link-16" class="py-name"><a title="q1_main.reader" class="py-name" href="#" onclick="return doclink('link-16', 'reader', 'link-3');">reader</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L19"></a><tt class="py-lineno">19</tt>  <tt class="py-line">                <tt id="link-17" class="py-name"><a title="q1_main.b" class="py-name" href="#" onclick="return doclink('link-17', 'b', 'link-1');">b</a></tt><tt class="py-op">.</tt><tt class="py-name">append</tt><tt class="py-op">(</tt><tt class="py-name">Boy</tt><tt class="py-op">(</tt><tt id="link-18" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-18', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Name'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-19" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-19', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Attractiveness'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-20" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-20', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Intelligence'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-21" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-21', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Minimum_req'</tt><tt class="py-op">]</tt><tt class="py-op">,</tt> <tt id="link-22" class="py-name"><a title="q1_main.row" class="py-name" href="#" onclick="return doclink('link-22', 'row', 'link-5');">row</a></tt><tt class="py-op">[</tt><tt class="py-string">'Budget'</tt><tt class="py-op">]</tt><tt class="py-op">)</tt><tt class="py-op">)</tt> </tt>
+<a name="L20"></a><tt class="py-lineno">20</tt>  <tt class="py-line"><tt class="py-keyword">for</tt> <tt id="link-23" class="py-name" targets="Variable q1_main.i=q1_main-module.html#i"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-23', 'i', 'link-23');">i</a></tt> <tt class="py-keyword">in</tt> <tt id="link-24" class="py-name"><a title="q1_main.g" class="py-name" href="#" onclick="return doclink('link-24', 'g', 'link-0');">g</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L21"></a><tt class="py-lineno">21</tt>  <tt class="py-line">        <tt class="py-keyword">for</tt> <tt id="link-25" class="py-name" targets="Variable q1_main.j=q1_main-module.html#j"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-25', 'j', 'link-25');">j</a></tt> <tt class="py-keyword">in</tt> <tt id="link-26" class="py-name"><a title="q1_main.b" class="py-name" href="#" onclick="return doclink('link-26', 'b', 'link-1');">b</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L22"></a><tt class="py-lineno">22</tt>  <tt class="py-line">                <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">'Checking: '</tt> <tt class="py-op">+</tt> <tt id="link-27" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-27', 'i', 'link-23');">i</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">+</tt> <tt class="py-string">' with '</tt> <tt class="py-op">+</tt> <tt id="link-28" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-28', 'j', 'link-25');">j</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt> </tt>
+<a name="L23"></a><tt class="py-lineno">23</tt>  <tt class="py-line">                <tt class="py-keyword">if</tt> <tt id="link-29" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-29', 'i', 'link-23');">i</a></tt><tt class="py-op">.</tt><tt class="py-name">checkElligible</tt><tt class="py-op">(</tt><tt id="link-30" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-30', 'j', 'link-25');">j</a></tt><tt class="py-op">)</tt> <tt class="py-keyword">and</tt> <tt id="link-31" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-31', 'j', 'link-25');">j</a></tt><tt class="py-op">.</tt><tt class="py-name">checkElligible</tt><tt class="py-op">(</tt><tt id="link-32" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-32', 'i', 'link-23');">i</a></tt><tt class="py-op">)</tt><tt class="py-op">:</tt> </tt>
+<a name="L24"></a><tt class="py-lineno">24</tt>  <tt class="py-line">                        <tt id="link-33" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-33', 'i', 'link-23');">i</a></tt><tt class="py-op">.</tt><tt class="py-name">relationshipStatus</tt> <tt class="py-op">=</tt> <tt class="py-string">'committed'</tt> </tt>
+<a name="L25"></a><tt class="py-lineno">25</tt>  <tt class="py-line">                        <tt id="link-34" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-34', 'j', 'link-25');">j</a></tt><tt class="py-op">.</tt><tt class="py-name">relationshipStatus</tt> <tt class="py-op">=</tt> <tt class="py-string">'committed'</tt> </tt>
+<a name="L26"></a><tt class="py-lineno">26</tt>  <tt class="py-line">                        <tt id="link-35" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-35', 'j', 'link-25');">j</a></tt><tt class="py-op">.</tt><tt class="py-name">girlFriendName</tt> <tt class="py-op">=</tt> <tt id="link-36" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-36', 'i', 'link-23');">i</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L27"></a><tt class="py-lineno">27</tt>  <tt class="py-line">                        <tt id="link-37" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-37', 'i', 'link-23');">i</a></tt><tt class="py-op">.</tt><tt class="py-name">boyFriendName</tt> <tt class="py-op">=</tt> <tt id="link-38" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-38', 'j', 'link-25');">j</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt> </tt>
+<a name="L28"></a><tt class="py-lineno">28</tt>  <tt class="py-line">                        <tt class="py-name">logging</tt><tt class="py-op">.</tt><tt class="py-name">info</tt><tt class="py-op">(</tt><tt class="py-string">'Committed: '</tt> <tt class="py-op">+</tt>  <tt id="link-39" class="py-name"><a title="q1_main.i" class="py-name" href="#" onclick="return doclink('link-39', 'i', 'link-23');">i</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">+</tt> <tt class="py-string">' with '</tt> <tt class="py-op">+</tt> <tt id="link-40" class="py-name"><a title="q1_main.j" class="py-name" href="#" onclick="return doclink('link-40', 'j', 'link-25');">j</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt><tt class="py-op">)</tt> </tt>
+<a name="L29"></a><tt class="py-lineno">29</tt>  <tt class="py-line">                        <tt class="py-keyword">break</tt> </tt>
+<a name="L30"></a><tt class="py-lineno">30</tt>  <tt class="py-line"><tt class="py-keyword">for</tt> <tt id="link-41" class="py-name" targets="Variable q1_main.x=q1_main-module.html#x"><a title="q1_main.x" class="py-name" href="#" onclick="return doclink('link-41', 'x', 'link-41');">x</a></tt> <tt class="py-keyword">in</tt> <tt id="link-42" class="py-name"><a title="q1_main.g" class="py-name" href="#" onclick="return doclink('link-42', 'g', 'link-0');">g</a></tt><tt class="py-op">:</tt> </tt>
+<a name="L31"></a><tt class="py-lineno">31</tt>  <tt class="py-line">        <tt class="py-keyword">if</tt> <tt id="link-43" class="py-name"><a title="q1_main.x" class="py-name" href="#" onclick="return doclink('link-43', 'x', 'link-41');">x</a></tt><tt class="py-op">.</tt><tt class="py-name">relationshipStatus</tt> <tt class="py-op">==</tt> <tt class="py-string">'single'</tt><tt class="py-op">:</tt> </tt>
+<a name="L32"></a><tt class="py-lineno">32</tt>  <tt class="py-line">                <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt id="link-44" class="py-name"><a title="q1_main.x" class="py-name" href="#" onclick="return doclink('link-44', 'x', 'link-41');">x</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">+</tt> <tt class="py-string">'isn\'t committed'</tt><tt class="py-op">)</tt> </tt>
+<a name="L33"></a><tt class="py-lineno">33</tt>  <tt class="py-line">        <tt class="py-keyword">else</tt><tt class="py-op">:</tt> </tt>
+<a name="L34"></a><tt class="py-lineno">34</tt>  <tt class="py-line">                <tt class="py-keyword">print</tt><tt class="py-op">(</tt><tt id="link-45" class="py-name"><a title="q1_main.x" class="py-name" href="#" onclick="return doclink('link-45', 'x', 'link-41');">x</a></tt><tt class="py-op">.</tt><tt class="py-name">name</tt> <tt class="py-op">+</tt> <tt class="py-string">' is a girl friend of: '</tt> <tt class="py-op">+</tt> <tt id="link-46" class="py-name"><a title="q1_main.x" class="py-name" href="#" onclick="return doclink('link-46', 'x', 'link-41');">x</a></tt><tt class="py-op">.</tt><tt class="py-name">boyFriendName</tt><tt class="py-op">)</tt> </tt>
+<a name="L35"></a><tt class="py-lineno">35</tt>  <tt class="py-line"> </tt><script type="text/javascript">
+<!--
+expandto(location.href);
+// -->
+</script>
+</pre>
+<br />
+<!-- ==================== NAVIGATION BAR ==================== -->
+<table class="navbar" border="0" width="100%" cellpadding="0"
+       bgcolor="#a0c0ff" cellspacing="0">
+  <tr valign="middle">
+  <!-- Home link -->
+      <th bgcolor="#70b0f0" class="navbar-select"
+          >&nbsp;&nbsp;&nbsp;Home&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Tree link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="module-tree.html">Trees</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Index link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="identifier-index.html">Indices</a>&nbsp;&nbsp;&nbsp;</th>
+
+  <!-- Help link -->
+      <th>&nbsp;&nbsp;&nbsp;<a
+        href="help.html">Help</a>&nbsp;&nbsp;&nbsp;</th>
+
+      <th class="navbar" width="100%"></th>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" width="100%%">
+  <tr>
+    <td align="left" class="footer">
+    Generated by Epydoc 3.0.1 on Mon Feb 27 00:21:26 2017
+    </td>
+    <td align="right" class="footer">
+      <a target="mainFrame" href="http://epydoc.sourceforge.net"
+        >http://epydoc.sourceforge.net</a>
+    </td>
+  </tr>
+</table>
+
+<script type="text/javascript">
+  <!--
+  // Private objects are initially displayed (because if
+  // javascript is turned off then we want them to be
+  // visible); but by default, we want to hide them.  So hide
+  // them unless we have a cookie that says to show them.
+  checkCookie();
+  // -->
+</script>
+</body>
+</html>
